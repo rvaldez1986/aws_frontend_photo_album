@@ -36,7 +36,7 @@
         var params = {q:query}
         url.search = new URLSearchParams(params).toString();
 
-        myHeaders.append("x-api-key", "z6IhVjc5Pn3Mch4Kh3VQ59hEvOcY9mTWXQ0YWW2g");
+        myHeaders.append("x-api-key", "7xGAPrZrRR5kdQ46cNu2u6cI4Yqq4Qt699tX7d3K");
 
         var requestOptions = {
           method: 'GET',
@@ -68,7 +68,7 @@
       let termination = "image/" + file.name.split('.').pop();
 		  myHeaders.append("Content-Type", termination);
 		  myHeaders.append("x-amz-meta-customLabels", JSON.stringify(labelArray));
-      myHeaders.append("x-api-key", "z6IhVjc5Pn3Mch4Kh3VQ59hEvOcY9mTWXQ0YWW2g");
+      myHeaders.append("x-api-key", "7xGAPrZrRR5kdQ46cNu2u6cI4Yqq4Qt699tX7d3K");
 
 		  var requestOptions = {
   			 method: 'PUT',

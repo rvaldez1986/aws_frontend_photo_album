@@ -32,7 +32,7 @@
 
 
         var myHeaders = new Headers();
-        var url = new URL('https://jegd1tnbvc.execute-api.us-east-2.amazonaws.com/dev/search');        
+        var url = new URL('https://u1ly072v1d.execute-api.us-east-2.amazonaws.com/dev/search');        
         var params = {q:query}
         url.search = new URLSearchParams(params).toString();
 
@@ -62,7 +62,7 @@
 
     	var myHeaders = new Headers();
 		  var file = fileupload.files[0];
-		  let url = 'https://jegd1tnbvc.execute-api.us-east-2.amazonaws.com/dev/upload/hw2b2cf/' + file.name;
+		  let url = 'https://u1ly072v1d.execute-api.us-east-2.amazonaws.com/dev/upload/hw2b2cf/' + file.name;
 		  var labelArray = document.getElementById("c_labels").value.split(/[ ,]+/);
 
       let termination = "image/" + file.name.split('.').pop();

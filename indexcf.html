@@ -19,24 +19,27 @@
     <script>
 
     function disp_images(result){
+      
       const obj = JSON.parse(result);
+
       for (let k of Object.keys(obj)) {
         var picture = obj[k];
         var img = document.createElement('img');
         img.src = 'https://hw2b2cf.s3.us-east-2.amazonaws.com/' + picture;
         document.getElementById('body').appendChild(img);        
       }
+
     }    
 
     async function os_search(query) {
 
 
         var myHeaders = new Headers();
-        var url = new URL('https://u1ly072v1d.execute-api.us-east-2.amazonaws.com/dev/search');        
+        var url = new URL('https://pxk1hu5iwc.execute-api.us-east-2.amazonaws.com/dev/search');        
         var params = {q:query}
         url.search = new URLSearchParams(params).toString();
 
-        myHeaders.append("x-api-key", "7xGAPrZrRR5kdQ46cNu2u6cI4Yqq4Qt699tX7d3K");
+        myHeaders.append("x-api-key", "i6EwYn7jYn8kTjjx3gEPd41EhsWzTko08aJ916ok");
 
         var requestOptions = {
           method: 'GET',
@@ -62,13 +65,13 @@
 
     	var myHeaders = new Headers();
 		  var file = fileupload.files[0];
-		  let url = 'https://u1ly072v1d.execute-api.us-east-2.amazonaws.com/dev/upload/hw2b2cf/' + file.name;
+		  let url = 'https://pxk1hu5iwc.execute-api.us-east-2.amazonaws.com/dev/upload/hw2b2cf/' + file.name;
 		  var labelArray = document.getElementById("c_labels").value.split(/[ ,]+/);
 
       let termination = "image/" + file.name.split('.').pop();
 		  myHeaders.append("Content-Type", termination);
 		  myHeaders.append("x-amz-meta-customLabels", JSON.stringify(labelArray));
-      myHeaders.append("x-api-key", "7xGAPrZrRR5kdQ46cNu2u6cI4Yqq4Qt699tX7d3K");
+      myHeaders.append("x-api-key", "i6EwYn7jYn8kTjjx3gEPd41EhsWzTko08aJ916ok");
 
 		  var requestOptions = {
   			 method: 'PUT',
